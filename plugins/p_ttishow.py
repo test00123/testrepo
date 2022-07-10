@@ -58,7 +58,7 @@ async def save_group(bot, message):
                                                   captain=(WE_CM.format(u.mention, message.chat.title)),
                                                   reply_markup=InlineKeyboardMarkup(
                                                                            [[
-                                                                             InlineKeyboardMarkup('Group Rules ', callback_data='group_rules')
+                                                                             InlineKeyboardButton('Group Rules ', callback_data='group_rules')
                                                                            ]]
                                                   ),
                                                   parse_mode='html'

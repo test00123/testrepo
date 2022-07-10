@@ -55,7 +55,7 @@ async def save_group(bot, message):
                         pass
                 temp.MELCOW['welcome'] = await message.reply_photo(
                                                   photo=(WL_PIC),
-                                                  captain=(WE_CM.format(u.mention, message.chat.title)),
+                                                  caption=(WE_CM.format(u.mention, message.chat.title)),
                                                   reply_markup=InlineKeyboardMarkup(
                                                                            [[
                                                                              InlineKeyboardButton('Group Rules ', callback_data='group_rules')

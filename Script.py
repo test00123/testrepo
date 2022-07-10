@@ -105,6 +105,8 @@ Added By - {}
 ID - <code>{}</code>
 Name - {}
 """
+    GROUP_R_TXT = """your group rules"""
+
 M_NT_FND = """<b>This Movie Not Found my Database \n\n Request to admin</b>"""
 
 

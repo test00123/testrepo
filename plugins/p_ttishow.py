@@ -1,11 +1,11 @@
 from pyrogram import Client, filters
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 from pyrogram.errors.exceptions.bad_request_400 import MessageTooLong, PeerIdInvalid
-from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS
+from info import ADMINS, LOG_CHANNEL, SUPPORT_CHAT, MELCOW_NEW_USERS, WL_PIC
 from database.users_chats_db import db
 from database.ia_filterdb import Media
 from utils import get_size, temp, get_settings
-from Script import script
+from Script import script, WE_CM
 from pyrogram.errors import ChatAdminRequired
 
 """-----------------------------------------https://t.me/GetTGLink/4179 --------------------------------------"""
@@ -53,7 +53,16 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>Hey , {u.mention}, Welcome to {message.chat.title}</b>")
+                temp.MELCOW['welcome'] = await message.reply_photo(
+                                                  photo=(WL_PIC),
+                                                  captain=(WE_CM.format(u.mention, message.chat.title)),
+                                                  reply_markup=InlineKeyboardMarkup(
+                                                                           [[
+                                                                             InlineKeyboardMarkup('Group Rules ', callback_data='group_rules')
+                                                                           ]]
+                                                  ),
+                                                  parse_mode='html'
+)
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))

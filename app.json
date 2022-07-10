@@ -15,8 +15,8 @@
       "index",
       "inline"
     ],
-    "website": "https://github.com/malik7983/file-filter-bot-new",
-    "repository": "https://github.com/malik7983/file-filter-bot-new",
+    "website": "https://github.com/EvamariaTG/EvaMaria",
+    "repository": "https://github.com/EvamariaTG/EvaMaria",
     "env": {
         "BOT_TOKEN": {
             "description": "Your bot token.",

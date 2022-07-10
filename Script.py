@@ -108,3 +108,15 @@ Name - {}
 M_NT_FND = """<b>This Movie Not Found my Database \n\n Request to admin</b>"""
 
 
+WE_CM = """<b> {}...
+
+Welcome to Our Group...
+
+     <s>{}</s>
+
+YOU R MSG  AND LAST"""
+     
+
+
+
+
